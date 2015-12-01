@@ -12,7 +12,7 @@ elixir(function(mix) {
     'bower_components/bootstrap/scss/bootstrap.scss',
     'resources/sass/app.scss'
     ]);
-
+  
 });
 
 elixir(function(mix) {
@@ -25,7 +25,7 @@ elixir(function(mix) {
       'resources/views/**/*'
     ],
     proxy:"localhost:8000",
-    port:8000,
+    port:8001,
     reloadDelay: 1000,
   });
 
