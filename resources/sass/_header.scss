@@ -1,0 +1,28 @@
+@import 'variables';
+.header-container{
+    height:50px;
+    .navbar-brand{
+        margin-top:10px;
+        a{
+            text-decoration: none;
+            color: #fff;
+            .logo{
+                float:left;
+                img{
+                    width:60px;
+                }
+            }
+            .info{
+                float:left;
+                margin-left:10px;
+                .name{
+                    font-size:1.5em;
+                    font-weight:900;
+                }
+                .designation{
+                    font-size:0.8em;
+                }
+            }
+        }
+    }
+}

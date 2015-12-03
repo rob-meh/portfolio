@@ -6,19 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Rob Meharg | Web Developer and Chill Dude</title>
+    <meta name="description" content="Web developer and general programmer from London, Ontario, with experience across the full-stack">
+    <meta name="keywords" content="london ontario web developement, london ontario php, london ontario laravel, london ontario javascript, laravel developer, php developer,">
+    <!-- The  Stylin', Profiln', makin it ...worthwhile'n?-->
+    <link rel="stylesheet" href="/css/vendor.css">
     <link rel="stylesheet" href="/css/app.css">
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
+    <!-- Juan Fonts De Leon -->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:700,300,400" rel="stylesheet" type="text/css">
+    <!-- I don't have a pun but this is the Mobile part -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
 
-    @yield('header')
+    @include('header')
 
-    @yield('main')
+    
 
-    @yield('footer')
+    @include('footer')
 
     @yield('scripts')
     <script type="text/javascript">

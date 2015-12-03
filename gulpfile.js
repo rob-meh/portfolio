@@ -8,11 +8,27 @@ elixir.config.css.folder = '';
 
 elixir(function(mix) {
 
+
+  //Vendor Styles
+  mix.less([
+    'bower_components/bootstrap/less/bootstrap.less',
+    ],'public/css/vendor-less-compiled.css');
+
+
+  mix.styles([
+    'public/css/vendor-less-compiled.css'
+    ],'public/css/vendor.css');
+
+
+  //Custom Styles
   mix.sass([
-    'bower_components/bootstrap/scss/bootstrap.scss',
-    'resources/sass/app.scss'
-    ]);
-  
+    'resources/sass/main.scss',
+    ],'public/css/custom-sass-compiled.css');
+
+  mix.styles([
+    'public/css/custom-sass-compiled.css'
+    ],'public/css/app.css');
+
 });
 
 elixir(function(mix) {
@@ -20,13 +36,12 @@ elixir(function(mix) {
   mix.browserSync(
   {
     files:[
-      'app/**/*',
-      'public/**/*',
-      'resources/views/**/*'
+    'app/**/*',
+    'public/**/*',
+    'resources/views/**/*'
     ],
-    proxy:"localhost:8000",
-    port:8001,
-    reloadDelay: 1000,
+    proxy:"localhost:9000",
+    port:9001,
   });
 
 });
